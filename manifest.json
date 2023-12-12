@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "components":[
+    {
+      "name": "index",
+      "path": "./web-components/index/index.html",
+      "cssPaths": [
+        "./web-components/index/index.css"
+      ],
+      "presenter": "./web-components/index/index.js",
+      "presenterName":"proofReaderPage"
+    }
+  ]
+}

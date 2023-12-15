@@ -6,16 +6,16 @@
   "components":[
     {
       "componentName": "proofreader",
-      "componentPath": "./web-components/proofreader/proofreader.html",
+      "componentPath": "web-components/proofreader/proofreader.html",
       "componentPresenter": "proofReaderPage",
       "cssPaths": [
-        "./web-components/proofreader/proofreader.css"
+        "web-components/proofreader/proofreader.css"
       ]
     }
   ],
   "presenters": [
     {
-      "presenterPath": "./web-components/proofreader/proofreader.js",
+      "presenterPath": "web-components/proofreader/proofreader.js",
       "presenterName":"proofReaderPage"
     }
   ]

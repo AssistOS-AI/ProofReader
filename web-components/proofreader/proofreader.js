@@ -1,7 +1,3 @@
-import {
-    extractFormInformation,
-    reverseQuerySelector
-} from "../../../imports.js";
 export class proofReaderPage {
     constructor(element, invalidate) {
         this.element = element;
@@ -47,7 +43,7 @@ export class proofReaderPage {
     }
 
     async executeProofRead(formElement) {
-        const formData= await extractFormInformation(formElement);
+        const formData= await webSkel.UtilsService.extractFormInformation(formElement);
         this.text = formData.data.text;
         this.personality = webSkel.currentUser.space.getPersonality(formData.data.personality);
         this.details = formData.data.details;
@@ -64,7 +60,7 @@ export class proofReaderPage {
         }
     }
     async copyText(_target){
-        let text=reverseQuerySelector(_target,".generated-text")?.innerText;
+        let text=await webSkel.UtilsService.reverseQuerySelector(_target,".generated-text")?.innerText;
         if(text){
             await navigator.clipboard.writeText(text);
             text.insertAdjacentHTML("afterbegin", `<confirmation-popup data-presenter="confirmation-popup" 

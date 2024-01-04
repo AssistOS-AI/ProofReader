@@ -7,7 +7,6 @@
     {
       "componentName": "proofreader-page",
       "componentPath": "web-components/proofreader-page/proofreader-page.html",
-      "componentPresenter": "proofReaderPage",
       "cssPaths": [
         "web-components/proofreader-page/proofreader-page.css"
       ]
@@ -19,6 +18,12 @@
       "presenterName":"proofReaderPage",
       "forComponent": "proofreader-page"
     }
-  ]
+  ],
+  "services": [
+    {
+      "serviceName":"routingService",
+      "servicePath": "services/routingService.js"
+    }
+    ]
 }
 

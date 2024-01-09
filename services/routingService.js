@@ -1,14 +1,14 @@
 export class routingService {
-    constructor() {
-        this.appName = "ProofReader";
-    }
-    async navigateToLocation(locationArray) {
-        if (locationArray[0] !== "proofreader-page") {
-            console.error("Invalid URL structure.");
+    constructor() {}
+    async navigateToLocation(locationArray = [], appName) {
+        const PROOFREADER_PAGE = "proofreader-page";
+
+        if (locationArray.length === 0 || locationArray[0] !== PROOFREADER_PAGE) {
+            console.error("Invalid URL structure: URL must start with 'proofreader-page'");
             return;
         }
         const webComponentName = locationArray[locationArray.length - 1];
-        const pageUrl = `${webSkel.currentUser.space.id}/${this.appName}/${locationArray.join("/")}`;
+        const pageUrl = `${webSkel.currentUser.space.id}/${appName}/${locationArray.join("/")}`;
         await webSkel.changeToDynamicPage(webComponentName, pageUrl);
     }
 }

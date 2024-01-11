@@ -60,11 +60,11 @@ export class proofReaderPage {
         }
     }
     async copyText(_target){
-        let text=await webSkel.UtilsService.reverseQuerySelector(_target,".generated-text")?.innerText;
+        let text=await webSkel.UtilsService.reverseQuerySelector(_target,".generated-text");
         if(text){
-            await navigator.clipboard.writeText(text);
+            await navigator.clipboard.writeText(text.innerText);
             text.insertAdjacentHTML("afterbegin", `<confirmation-popup data-presenter="confirmation-popup" 
-                    data-message="Copied!" data-left="${text.innerText.offsetWidth/2}"></confirmation-popup>`);
+                    data-message="Copied!" data-left="${text.offsetWidth/2}"></confirmation-popup>`);
         }
     }
 }

@@ -62,7 +62,18 @@
     --chatbots-input: #F5E6EF ;/* var(--chatbots-input); */
     --button-purple: #A42E70 ;/* var(--button-purple); */
 }
-
+proofreader-page::before{
+    z-index: -1;
+    content: "";
+    background-image: url('background.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
 #page-content{
     overflow:hidden;
 }
@@ -70,11 +81,8 @@
 .label{
     margin-bottom: 10px;
     color: var(--gray-black);
-    font-feature-settings: 'clig' off, 'liga' off;
     font-size: 12px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
 }
 #language,
 #personality {
@@ -118,7 +126,7 @@ option {
     min-height: max-content;
     width: 100%;
     height:50%;
-    padding: 40px;
+    padding: 0 40px 40px 40px;
 }
 .proof-reader-generated-content {
     border: 0.5px solid var(--proof-reader-content);
@@ -148,8 +156,8 @@ option {
 
 }
 .proof-reader-cell{
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
     line-height: 42px;
     text-align: left;
     color: var(--left-sidebar);
@@ -175,11 +183,9 @@ option {
     font-weight: 700;
     line-height: normal;
     text-transform: capitalize;
-    box-shadow: 0 2px 4px 0 var(--chatbots-shadow);
 }
 .proof-reader-form{
     display:flex;
-    flex-direction:row;
     width:100%;
     height:100%;
 }
@@ -190,13 +196,11 @@ option {
     align-items:flex-start;
 }
 .proof-reader-content-left{
-    margin-right:5%;
-    width:40%;
-
+    width: 50%;
+    margin-right: 40px;
 }
 .proof-reader-content-right{
-    margin-left:5%;
-    width:60%;
+    width: 50%;
 }
 #prompt{
     width:100%;
@@ -209,10 +213,10 @@ option {
 }
 .form-item{
     width:100%;
-    margin-bottom: 15px;
+
 }
 .details{
-    margin-top: 15px;
+
 }
 .generated-text-title{
     display: flex;

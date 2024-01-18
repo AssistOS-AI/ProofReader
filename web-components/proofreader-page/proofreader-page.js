@@ -44,14 +44,16 @@ export class proofReaderPage {
 
     async executeProofRead(formElement) {
         const formData= await webSkel.UtilsService.extractFormInformation(formElement);
-        this.text = formData.data.text;
-        this.personality = webSkel.currentUser.space.getPersonality(formData.data.personality);
-        this.details = formData.data.details;
-        let flowId = webSkel.currentUser.space.getFlowIdByName("Proofread");
-        let result = await webSkel.getService("LlmsService").callFlow(flowId, this.text, formData.data.personality, this.details);
-        this.observations = result.responseJson.observations;
-        this.generatedText = result.responseJson.improvedText;
-        this.invalidate();
+        if(formData.isValid){
+            this.text = formData.data.text;
+            this.personality = webSkel.currentUser.space.getPersonality(formData.data.personality);
+            this.details = formData.data.details;
+            let flowId = webSkel.currentUser.space.getFlowIdByName("Proofread");
+            let result = await webSkel.getService("LlmsService").callFlow(flowId, this.text, formData.data.personality, this.details);
+            this.observations = result.responseJson.observations;
+            this.generatedText = result.responseJson.improvedText;
+            this.invalidate();
+        }
     }
 
     async regenerate(_target){

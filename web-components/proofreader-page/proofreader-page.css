@@ -36,6 +36,7 @@
     --medium-blue: #0C5C9E ;/* var(--medium-blue); */
     --input-file-background: #F7FBFF ;/* var(--input-file-background); */
     --strong-blue: #007bff ;/* var(--strong-blue); */
+    --very-light-blue: #EAF5FF;
     --documents-page-header: #363C44 ;/* var(--documents-page-header); */
     --harsh-gray: #94aee34d ;/* var(--harsh-gray); */
     --input-file-selector: #2B64E1; /* var(--input-file-selector); */
@@ -62,6 +63,9 @@
     --chatbots-input: #F5E6EF ;/* var(--chatbots-input); */
     --button-purple: #A42E70 ;/* var(--button-purple); */
 }
+proofreader-page{
+    position: relative;
+}
 proofreader-page::before{
     z-index: -1;
     content: "";
@@ -84,25 +88,30 @@ proofreader-page::before{
     font-size: 12px;
     font-weight: 600;
 }
+.personality{
+    margin-right: 40px;
+}
 #language,
 #personality {
     width: 100%;
     height: 35px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 12px;
     font-weight: 400;
     color: var(--settings-page-theme);
-    border: 0.5px solid var(--lighter-black);
+    border: 1px solid var(--blue-border);
     background:none;
     padding:7px 12px;
 }
+#text{
+    height: calc(100% - 24px);
+}
 .form-item > textarea {
-    padding: 7px 12px;
+    padding: 12px;
     width: 100%;
-    height: 100%;
     resize: none;
-    border: 0.5px solid var(--lighter-black);
-    border-radius: 8px;
+    border: 1px solid var(--blue-border);
+    border-radius: 10px;
 }
 option {
     font-size: 12px;
@@ -115,7 +124,7 @@ option {
     max-width: min-content;
 }
 .form-button{
-    margin-top: 30px;
+
 }
 .proof-reader-content-wrapper{
     height:100%;
@@ -128,14 +137,7 @@ option {
     height:50%;
     padding: 0 40px 40px 40px;
 }
-.proof-reader-generated-content {
-    border: 0.5px solid var(--proof-reader-content);
-    display: flex;
-    min-height: fit-content;
-    width:100%;
-    height: 50%;
-    background: var(--flow-marketplace);
-}
+
 .form-item-container {
     width: 100%;
     display:flex;
@@ -145,7 +147,7 @@ option {
     height: 100%;
 }
 #text-textarea {
-    height: 80%;
+    height: 100%;
     width: 100%;
 }
 @media screen and (max-width: 1100px) {
@@ -189,19 +191,19 @@ option {
     width:100%;
     height:100%;
 }
-.proof-reader-content-left,.proof-reader-content-right{
+.right-content{
+    width: 50%;
     height:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.proof-reader-content-left{
+.left-content{
+    height:100%;
     width: 50%;
     margin-right: 40px;
 }
-.proof-reader-content-right{
-    width: 50%;
-}
+
 #prompt{
     width:100%;
     height:100%;
@@ -211,30 +213,34 @@ option {
     padding:12px;
 
 }
-.form-item{
-    width:100%;
 
+#details{
+    height: calc(100% - 24px);
 }
 .details{
-
+    margin-bottom: 30px;
+    height: calc(100% - 59px);
 }
 .generated-text-title{
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0;
-    text-align: left;
     color: var(--generated-text-title);
+    border-bottom: 1px solid var(--very-light-gray);
 }
 .proof-reader-generated-content{
-    padding:40px;
-    display:flex;
+    display: flex;
+    min-height: fit-content;
+    width:100%;
+    height: 50%;
+    padding:0 40px 40px 40px;
     flex-direction:column;
 }
 .generated-text,
 .observations{
+    padding: 12px;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
@@ -242,20 +248,21 @@ option {
     text-align: justify;
     color:var(--proofreader-generated-content);
     overflow-y: scroll;
-    width:95%;
     height: 170px;
 }
 .generated-text-container{
     display:none;
-    padding: 20px 0 50px 0;
+    padding-bottom: 40px;
 }
 .ai-text-subtitle{
     color:  var(--gray-black);
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 .generated-text-inner-container{
+    border: 1px solid var(--blue-border);
+    background: var(--very-light-blue);
+    border-radius: 10px;
     overflow-y:scroll ;
     width: 50%;
 }
@@ -279,4 +286,17 @@ option {
 }
 .improved-text-container{
     display: flex;
+    padding: 12px;
+    border-bottom: 1px solid var(--very-light-gray);
+}
+.generate-section{
+    display: flex;
+    align-items: end;
+}
+.generate-button{
+    width: calc(100% - 264px);
+    justify-content: center;
+}
+.right-margin{
+    margin-right: 40px;
 }

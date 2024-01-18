@@ -251,7 +251,7 @@ option {
     height: 170px;
 }
 .generated-text-container{
-    display:none;
+    display:flex;
     padding-bottom: 40px;
 }
 .ai-text-subtitle{
@@ -279,10 +279,12 @@ option {
 #refresh-button,
 #copy-button{
     margin-left: 10px;
+    display: none;
 }
 #refresh-button:hover,
 #copy-button:hover{
     cursor: pointer;
+
 }
 .improved-text-container{
     display: flex;

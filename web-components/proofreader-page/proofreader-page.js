@@ -62,7 +62,7 @@ export class proofReaderPage {
         }
     }
     async copyText(_target){
-        let text=await webSkel.reverseQuerySelector(_target,".generated-text");
+        let text=await webSkel.reverseQuerySelector(_target,".improved-text-container");
         if(text){
             await navigator.clipboard.writeText(text.innerText);
             text.insertAdjacentHTML("afterbegin", `<confirmation-popup data-presenter="confirmation-popup" 

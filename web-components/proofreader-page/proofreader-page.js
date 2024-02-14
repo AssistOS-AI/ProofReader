@@ -66,7 +66,7 @@ export class proofReaderPage {
         if(text){
             await navigator.clipboard.writeText(text.innerText);
             text.insertAdjacentHTML("afterend", `<confirmation-popup data-presenter="confirmation-popup" 
-                    data-message="Copied!" data-left="${text.offsetWidth}"></confirmation-popup>`);
+                    data-message="Copied!" data-left="${text.offsetWidth+150}"></confirmation-popup>`);
         }
     }
 }

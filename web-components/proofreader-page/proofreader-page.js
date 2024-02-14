@@ -43,13 +43,13 @@ export class proofReaderPage {
     }
 
     async executeProofRead(formElement) {
-        const formData= await webSkel.UtilsService.extractFormInformation(formElement);
+        const formData= await webSkel.extractFormInformation(formElement);
         if(formData.isValid){
             this.text = formData.data.text;
             this.personality = webSkel.currentUser.space.getPersonality(formData.data.personality);
             this.details = formData.data.details;
             let flowId = webSkel.currentUser.space.getFlowIdByName("Proofread");
-            let result = await webSkel.getService("LlmsService").callFlow(flowId, this.text, formData.data.personality, this.details);
+            let result = await webSkel.appServices.callFlow(flowId, this.text, formData.data.personality, this.details);
             this.observations = result.responseJson.observations;
             this.generatedText = result.responseJson.improvedText;
             this.invalidate();
@@ -62,7 +62,7 @@ export class proofReaderPage {
         }
     }
     async copyText(_target){
-        let text=await webSkel.UtilsService.reverseQuerySelector(_target,".generated-text");
+        let text=await webSkel.reverseQuerySelector(_target,".generated-text");
         if(text){
             await navigator.clipboard.writeText(text.innerText);
             text.insertAdjacentHTML("afterbegin", `<confirmation-popup data-presenter="confirmation-popup" 

@@ -5,18 +5,10 @@
   "entryPointComponent": "proofreader-page",
   "components":[
     {
-      "componentName": "proofreader-page",
-      "componentPath": "web-components/proofreader-page/proofreader-page.html",
-      "cssPaths": [
-        "web-components/proofreader-page/proofreader-page.css"
-      ]
-    }
-  ],
-  "presenters": [
-    {
-      "presenterPath": "web-components/proofreader-page/proofreader-page.js",
-      "presenterName":"proofReaderPage",
-      "forComponent": "proofreader-page"
+      "name": "proofreader-page",
+      "presenterClassName": "proofReaderPage",
+      "type": "pages",
+      "componentPath": "web-components/proofreader-page/"
     }
   ],
   "services": [

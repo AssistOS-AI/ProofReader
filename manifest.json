@@ -16,16 +16,10 @@
   "presenters": [
     {
       "presenterPath": "web-components/proofreader-page/proofreader-page.js",
-      "presenterName":"proofReaderPage",
+      "presenterName":"ProofReaderPage",
       "forComponent": "proofreader-page"
     }
   ],
-  "services": [
-    {
-      "serviceName":"routingService",
-      "servicePath": "services/routingService.js"
-    }
-    ],
   "manager": {
     "path": "manager.js",
     "name": "Manager"

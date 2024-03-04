@@ -6,18 +6,9 @@
   "description": "ProofReader is a tool that checks for grammar errors and helps improve your writing. It's like having a virtual editor who gives you suggestions to make your writing clearer and more polished. You can even customize it to match your writing style and preferences.",
   "components":[
     {
-      "componentName": "proofreader-page",
-      "componentPath": "web-components/proofreader-page/proofreader-page.html",
-      "cssPaths": [
-        "web-components/proofreader-page/proofreader-page.css"
-      ]
-    }
-  ],
-  "presenters": [
-    {
-      "presenterPath": "web-components/proofreader-page/proofreader-page.js",
-      "presenterName":"ProofReaderPage",
-      "forComponent": "proofreader-page"
+      "name": "proofreader-page",
+      "presenterClassName": "proofReaderPage",
+      "type": "pages"
     }
   ],
   "manager": {

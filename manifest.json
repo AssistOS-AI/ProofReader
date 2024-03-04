@@ -9,7 +9,6 @@
       "name": "proofreader-page",
       "presenterClassName": "proofReaderPage",
       "type": "pages",
-      "componentPath": "web-components/proofreader-page/"
     }
   ],
   "services": [

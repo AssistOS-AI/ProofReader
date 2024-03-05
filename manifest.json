@@ -7,8 +7,14 @@
   "components":[
     {
       "name": "proofreader-page",
-      "presenterClassName": "proofReaderPage",
+      "presenterClassName": "ProofReaderPage",
       "type": "pages"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "RoutingService",
+      "servicePath": "services/RoutingService.js"
     }
   ],
   "manager": {

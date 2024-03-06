@@ -7,6 +7,7 @@ export class ProofReaderPage {
     }
 
     beforeRender() {
+        this.background = `spaces/${webSkel.currentUser.space.id}/applications/ProofReader/assets/background.png`;
         if(!this.personality){
             this.selectedPersonality = `<option value="" disabled selected hidden>Select personality</option>`;
         }else {

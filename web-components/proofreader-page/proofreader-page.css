@@ -68,7 +68,7 @@ proofreader-page{
 }
 .proofreader-background{
     z-index: -1;
-    background-size: cover;
+    object-fit: cover;
     position: absolute;
     top: 0;
     right: 0;

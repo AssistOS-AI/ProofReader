@@ -1,4 +1,4 @@
-export class proofReaderPage {
+export class ProofReaderPage {
     constructor(element, invalidate) {
         this.element = element;
         this.invalidate = invalidate;

@@ -162,7 +162,7 @@ option {
     line-height: 42px;
     text-align: left;
     color: var(--left-sidebar);
-    border-bottom: 1px solid var(--very-light-gray);
+    //border-bottom: 1px solid var(--very-light-gray);
     width: 100%;
     white-space: nowrap;
     overflow: hidden;

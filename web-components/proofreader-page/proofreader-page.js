@@ -51,8 +51,8 @@ export class ProofReaderPage {
             this.details = formData.data.details;
             let flowId = system.space.getFlowIdByName("Proofread");
             let result = await system.services.callFlow(flowId, this.text, formData.data.personality, this.details);
-            this.observations = result.responseJson.observations;
-            this.generatedText = result.responseJson.improvedText;
+            this.observations = result.observations;
+            this.generatedText = result.improvedText;
             this.invalidate();
         }
     }

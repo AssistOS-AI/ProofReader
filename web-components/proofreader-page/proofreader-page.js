@@ -49,8 +49,10 @@ export class ProofReaderPage {
             this.text = formData.data.text;
             this.personality = assistOS.space.getPersonality(formData.data.personality);
             this.details = formData.data.details;
-            let flowId = assistOS.space.getFlowIdByName("Proofread");
-            let result = await assistOS.services.callFlow(flowId, this.text, formData.data.personality, this.details);
+            let result = await assistOS.callFlow("Proofread", {
+                text: this.text,
+                prompt: formData.data.prompt
+            }, formData.data.personality);
             this.observations = result.observations;
             this.generatedText = result.improvedText;
             this.invalidate();

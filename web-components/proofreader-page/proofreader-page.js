@@ -7,14 +7,14 @@ export class ProofReaderPage {
     }
 
     beforeRender() {
-        this.background = `spaces/${system.space.id}/applications/ProofReader/assets/background.png`;
+        this.background = `spaces/${assistOS.space.id}/applications/ProofReader/assets/background.png`;
         if(!this.personality){
             this.selectedPersonality = `<option value="" disabled selected hidden>Select personality</option>`;
         }else {
             this.selectedPersonality = `<option value="${this.personality.id}" selected>${this.personality.name}</option>`
         }
         let stringHTML = "";
-        for(let personality of system.space.personalities){
+        for(let personality of assistOS.space.personalities){
             stringHTML+=`<option value=${personality.id}>${personality.name}</option>`;
         }
         this.personalitiesOptions = stringHTML;
@@ -44,13 +44,13 @@ export class ProofReaderPage {
     }
 
     async executeProofRead(formElement) {
-        const formData= await system.UI.extractFormInformation(formElement);
+        const formData= await assistOS.UI.extractFormInformation(formElement);
         if(formData.isValid){
             this.text = formData.data.text;
-            this.personality = system.space.getPersonality(formData.data.personality);
+            this.personality = assistOS.space.getPersonality(formData.data.personality);
             this.details = formData.data.details;
-            let flowId = system.space.getFlowIdByName("Proofread");
-            let result = await system.services.callFlow(flowId, this.text, formData.data.personality, this.details);
+            let flowId = assistOS.space.getFlowIdByName("Proofread");
+            let result = await assistOS.services.callFlow(flowId, this.text, formData.data.personality, this.details);
             this.observations = result.observations;
             this.generatedText = result.improvedText;
             this.invalidate();
@@ -63,7 +63,7 @@ export class ProofReaderPage {
         }
     }
     async copyText(_target){
-        let text=await system.UI.reverseQuerySelector(_target,".improved-text-container");
+        let text=await assistOS.UI.reverseQuerySelector(_target,".improved-text-container");
         if(text){
             await navigator.clipboard.writeText(text.innerText);
             text.insertAdjacentHTML("afterend", `<confirmation-popup data-presenter="confirmation-popup" 

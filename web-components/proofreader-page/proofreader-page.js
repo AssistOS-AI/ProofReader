@@ -14,10 +14,10 @@ export class ProofReaderPage {
             this.selectedPersonality = `<option value="${this.personality.id}" selected>${this.personality.name}</option>`
         }
         let stringHTML = "";
-        for(let personality of assistOS.space.personalities){
-            stringHTML+=`<option value=${personality.id}>${personality.name}</option>`;
-        }
-        this.personalitiesOptions = stringHTML;
+        // for(let personality of assistOS.space.personalities){
+        //     stringHTML+=`<option value=${personality.id}>${personality.name}</option>`;
+        // }
+        // this.personalitiesOptions = stringHTML;
     }
 
     afterRender(){

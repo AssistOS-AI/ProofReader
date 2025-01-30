@@ -14,6 +14,11 @@
       "name": "proofread-plugin",
       "type": "modals",
       "presenterClassName": "ProofreadPlugin"
+    },
+    {
+      "name": "translate-document-modal",
+      "type": "modals",
+      "presenterClassName": "TranslateDocumentModal"
     }
   ],
   "services": [
@@ -40,6 +45,13 @@
         "icon": "/assets/icons/light-bulb.svg",
         "presenterClassName": "ProofreadPlugin"
       }
+    ],
+    "document": [{
+      "name": "Translate Document",
+      "componentName": "translate-document-modal",
+      "icon": "/assets/icons/translate.svg",
+      "presenterClassName": "TranslateDocumentModal"
+    }
     ]
   }
 }

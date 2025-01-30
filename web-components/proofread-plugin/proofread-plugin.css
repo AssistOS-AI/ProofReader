@@ -1,0 +1,49 @@
+proofread-plugin{
+    display: block;
+    width: 700px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 1px 7.3px 0px #00000040;
+    text-align: initial;
+}
+.section-header{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form-item.select-item{
+    width: 200px;
+}
+proofread-plugin #text,
+proofread-plugin .generated-text{
+    height: 150px;
+    overflow-y: scroll;
+    resize: none;
+}
+proofread-plugin #prompt{
+    height: 100px;
+    overflow-y: scroll;
+    resize: none;
+}
+
+proofread-plugin .form-footer{
+    display: flex;
+}
+proofread-plugin .buttons-section{
+    margin-top: 22px;
+    margin-left: 10px;
+    display: flex;
+}
+proofread-plugin .decision-buttons{
+    display: flex;
+}
+proofread-plugin .right-margin{
+    margin-right: 10px;
+}
+.form-label.result{
+    font-size: 18px;
+}
+.result-header{
+    display: flex;
+    align-items: baseline;
+}

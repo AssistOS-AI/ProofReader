@@ -10,6 +10,11 @@
       "name": "proofreader-page",
       "presenterClassName": "ProofReaderPage",
       "type": "pages"
+    },
+    {
+      "name": "proofread-plugin",
+      "type": "modals",
+      "presenterClassName": "ProofreadPlugin"
     }
   ],
   "services": [
@@ -21,6 +26,22 @@
   "manager": {
     "path": "manager.js",
     "name": "Manager"
+  },
+  "plugins": {
+    "abstract": [{
+      "name": "Proofread",
+      "componentName": "proofread-plugin",
+      "icon": "/assets/icons/light-bulb.svg",
+      "presenterClassName": "ProofreadPlugin"
+    }],
+    "paragraph": [
+      {
+        "name": "Proofread",
+        "componentName": "proofread-plugin",
+        "icon": "/assets/icons/light-bulb.svg",
+        "presenterClassName": "ProofreadPlugin"
+      }
+    ]
   }
 }
 

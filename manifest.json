@@ -32,18 +32,14 @@
     "name": "Manager"
   },
   "plugins": {
-    "abstract": [{
-      "name": "Proofread",
-      "componentName": "proofread-plugin",
-      "icon": "/assets/icons/light-bulb.svg",
-      "presenterClassName": "ProofreadPlugin"
-    }],
+    "abstract": [],
     "paragraph": [
       {
         "name": "Proofread",
         "componentName": "proofread-plugin",
         "icon": "/assets/icons/light-bulb.svg",
-        "presenterClassName": "ProofreadPlugin"
+        "presenterClassName": "ProofreadPlugin",
+        "type": "component"
       }
     ],
     "document": [{

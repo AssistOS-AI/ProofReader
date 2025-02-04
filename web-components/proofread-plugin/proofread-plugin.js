@@ -127,9 +127,5 @@ export class ProofreadPlugin {
             });
             await documentModule.updateDocumentAbstract(assistOS.space.id, this.documentPresenter._document.id, newText);
         }
-        this.closeModal();
-    }
-    closeModal(button){
-        assistOS.UI.closeModal(this.element);
     }
 }

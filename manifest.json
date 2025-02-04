@@ -37,7 +37,7 @@
       {
         "name": "Proofread",
         "componentName": "proofread-plugin",
-        "icon": "/assets/icons/light-bulb.svg",
+        "icon": "assets/icons/light-bulb.svg",
         "presenterClassName": "ProofreadPlugin",
         "type": "component"
       }

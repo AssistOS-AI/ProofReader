@@ -35,18 +35,18 @@
     "abstract": [],
     "paragraph": [
       {
-        "name": "Proofread",
-        "componentName": "proofread-plugin",
+        "tooltip": "Proofread",
+        "component": "proofread-plugin",
         "icon": "assets/icons/light-bulb.svg",
-        "presenterClassName": "ProofreadPlugin",
-        "type": "component"
+        "presenter": "ProofreadPlugin",
+        "type": "embedded"
       }
     ],
     "document": [{
-      "name": "Translate Document",
-      "componentName": "translate-document-modal",
+      "tooltip": "Translate Document",
+      "component": "translate-document-modal",
       "icon": "/assets/icons/translate.svg",
-      "presenterClassName": "TranslateDocumentModal"
+      "presenter": "TranslateDocumentModal"
     }
     ]
   }
